@@ -140,7 +140,7 @@ function generate() {
     let randomText = compliments[Math.floor(Math.random() * compliments.length)];
     let randomImage = images[Math.floor(Math.random() * images.length)];
 
-    let message = `<p>С 8 Марта, ${role} ${name}! 🎉 ${randomText}</p>`;
+    let message = `<p>С 8 Марта, ${role} ${name}! 🎉<br>${randomText}</p>`;
     let imgTag = `<img src="images/${randomImage}" style="width: 200px; border-radius: 15px; margin-bottom: 15px;" onerror="this.src='https://via.placeholder.com/200x200?text=🌸'">`
     document.getElementById("output").innerHTML = (imgTag + message);
 
@@ -243,3 +243,4 @@ function createConfettiPiece(container, colors) {
     }, animationDuration * 1000);
 
 }
+
